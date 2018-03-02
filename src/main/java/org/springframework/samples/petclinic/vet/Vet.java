@@ -63,8 +63,9 @@ public class Vet extends Person {
     @XmlElement
     public List<Specialty> getSpecialties() {
         List<Specialty> sortedSpecs = new ArrayList<>(getSpecialtiesInternal());
+        boolean sortAscending = false;
         PropertyComparator.sort(sortedSpecs,
-                new MutableSortDefinition("name", true, true));
+                new MutableSortDefinition("name", true, sortAscending));
         return Collections.unmodifiableList(sortedSpecs);
     }
 

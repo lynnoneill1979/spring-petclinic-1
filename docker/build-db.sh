@@ -1,2 +1,2 @@
 #!/bin/bash
-docker build -t petclinic-db -f docker/Dockerfile.db .
+docker build -t soloio/petclinic-db:v0.2 -f docker/Dockerfile.db .
